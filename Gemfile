@@ -3,7 +3,7 @@ ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
-# Use sqlite3 as the database for Active Record
+# Use sqlite3 as the day tabase for Active Record
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -47,7 +47,7 @@ group :development do
 end
 
 group :production do
-  gem "pg", '0.21.1'
+  gem "pg"
   gem "rails_12factor"
 end
 
