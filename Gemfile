@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
 # Use sqlite3 as the day tabase for Active Record
@@ -46,7 +46,7 @@ group :development do
 end
 
 group :production do
-  gem "pg"
+  gem "pg". '~>0.11'
   gem "rails_12factor"
 end
 
