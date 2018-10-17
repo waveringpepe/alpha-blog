@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.5.1'
-
+gem 'cowsay'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
 # Use sqlite3 as the day tabase for Active Record
