@@ -1,8 +1,4 @@
-<h1>Create an article</h1>
-
-<p>
-  <%= link_to "All articles",articles_path %>
-</p>
+<h1>Edit an article</h1>
 
 <% if @article.errors.any? %>
 
@@ -28,6 +24,6 @@
       <%= f.submit %>
     </p>
 
-
 <% end %>
 
+<%= link_to "All articles", articles_path %>
