@@ -21,6 +21,14 @@
 .margin{
   margin-top:40px;
 }
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+.description {
+  margin-top: 0;
+  text-align:left;
+}
 .jumbotron{
   background-image:asset-url('stock.jpg');
   background-size:cover;
