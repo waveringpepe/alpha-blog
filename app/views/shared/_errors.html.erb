@@ -1,0 +1,17 @@
+<% if obj.errors.any? %>
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">
+      <%= pluralize(obj.errors.count, "Error") %> prohibited this article from beign saved!
+    </h4>
+      <p>
+        <ul>
+          <% obj.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </p>
+      <hr>
+      <p class="mb-0">If you need help send us an email to <a href="hello@5roots.co" target="_blank">hello@5roots.co</a></p>
+  </div>
+<% end %>  
+ 
