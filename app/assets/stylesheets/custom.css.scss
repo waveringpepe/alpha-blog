@@ -4,7 +4,7 @@
 #logo{
   float: left;
   font-size: 1.7em;
-  color: #fff;
+  color: blue;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
@@ -12,8 +12,13 @@
 }
 
 #logo:hover{
-  color:red;
+  color: gray;
   text-decoration:none;
+}
+#navbar{
+  color: red;
+  background-color: white;
+  
 }
 .center{
   text-align:center;
@@ -29,18 +34,7 @@
   margin-top: 0;
   text-align:left;
 }
-.jumbotron{
-  background-image:asset-url('stock.jpg');
-  background-size:cover;
-  
-}
-.jumbotron h1{
-  color:#gray;
-  text-align:left;
-  margin-bottom:30px;
-  letter-spacing: -1px;
-  font-weight: bold;
-}
+
 .btn-xlarge {
   font-size: 1.7em;
 }
