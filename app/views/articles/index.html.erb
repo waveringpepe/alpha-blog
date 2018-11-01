@@ -1,8 +1,11 @@
-<h1 align: "left">Listing all articles</h1>
-<div align="center">
+<div>
+  <h1 class="float-left">Listing all articles</h1>
+  <%= link_to "New article",new_article_path,class:"btn btn-success btn-lg float-right" %>
+</div></br></br></br>
+<div align="left">
   <%= will_paginate %>
 </div>
 <%= render 'article',obj: @articles %>
 <div align="center">
-  <%= will_paginate %>
+  <%= will_paginate class:"pagination" %>
 </div>
