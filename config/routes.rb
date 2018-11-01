@@ -17,6 +17,8 @@
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   
+  resources :categories, except: [:destroy]
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
