@@ -19,7 +19,7 @@
             <% end %>
           <% if logged_in? and current_user.admin? %>
             <div class="dropdown-divider"></div>
-          <%= link_to "Create New Category", new_category_path %></li>
+          <%= link_to "Create New Category", new_category_path, class:"dropdown-item" %></li>
           <% end %>
         </div>
       </li>
