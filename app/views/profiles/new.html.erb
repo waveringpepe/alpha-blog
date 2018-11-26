@@ -1,0 +1,123 @@
+<%= render 'shared/errors', obj: @profile %>
+<div class='form'>
+  <div class='col-xs-12'>
+    <%= form_for(@profile,:html => {class: "form-horizontal", role: "form"}) do |f| %>
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label">
+          <%= f.label :skype %>
+        </div>
+        <div class="col-sm-10">
+          <%= f.text_field :skype, class: "form-control", placeholder: "Enter your skype id or e-mail", autofocus:true %>
+        </div>
+      </div>
+       <div class="form-group row">
+        <div class="col-sm-2 col-form-label">
+          <%= f.label :whatsapp %>
+        </div>
+        <div class="col-sm-10">
+          <%= f.text_field :whatsapp, class: "form-control", placeholder: "Enter your whatsapp", autofocus:true %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label">
+          <%= f.label :Timezone %>
+        </div>
+        <div class="col-sm-10">
+          <%= time_zone_select(:person, :time_zone)  %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label">
+          <label for="exampleFormControlSelect1">Select your language</label>
+        </div>
+        <div class="col-sm-10">
+          
+          <%= select_tag(:languages, options_for_select([['English'], ['Spanish'],
+                        ['Portuguese'],['Chinese'],['Italian'],['Russian'],['French']])) %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label">
+          <label for="exampleFormControlSelect1">Select the reason for learning a language</label>
+        </div>
+        <div class="col-sm-10">
+          
+          <%= select_tag(:languages, options_for_select([['School'], ['Work'],
+                        ['Hobby'],['Travel'],['I am moving to other country'],['Other']])) %>
+        </div>
+      </div>
+      
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label">
+          <label for="exampleFormControlSelect1">¿When is your birthday?</label>
+        </div>
+        <div class="col-sm-10">
+        <%= date_select :age, :birth_date %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label">
+          <label for="exampleFormControlSelect1">Select your level</label>
+        </div>
+        <div class="col-sm-10">
+          <%= select_tag(:level, options_for_select([['0'], ['1'],
+                        ['2'],['3'],['4'],['5'],['6'],['7'],['8'],['9'],['10']])) %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label">
+          <label for="exampleFormControlSelect1">When would you like to start with your lessons</label>
+        </div>
+        <div class="col-sm-10">
+          <%= select_tag(:begin, options_for_select([['today'], ['In a few days'],
+                        ['In two weeks'],['This month']])) %>
+        </div>
+      </div>
+      
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label">
+          <label for="exampleFormControlSelect1">Select 3 options for your schedule</label>
+        </div>
+        <div class="col-sm-10"> Primera opción
+          <%= select_tag(:schedule, options_for_select([['Monday'], ['Tuesday'],
+                        ['Wednesday'],['Thursday'],['Friday'],['Saturday'],['Sunday']])) %>
+          <%= select_hour(Time.now) %> Minutos
+          <%= select_minute(Time.now) %></br></br>
+          Segunda opción
+          <%= select_tag(:schedule, options_for_select([['Monday'], ['Tuesday'],
+                        ['Wednesday'],['Thursday'],['Friday'],['Saturday'],['Sunday']])) %>
+          at <%= select_hour(Time.now) %> hours
+          <%= select_minute(Time.now) %> minutes</br></br>
+          Tercera opción
+          <%= select_tag(:schedule, options_for_select([['Monday'], ['Tuesday'],
+                        ['Wednesday'],['Thursday'],['Friday'],['Saturday'],['Sunday']])) %>
+          <%= select_hour(Time.now) %> Minutos
+          <%= select_minute(Time.now) %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label">
+          <%= f.label :recommendation %>
+        </div>
+        <div class="col-sm-10">
+          <%= f.text_field :recommendation, class: "form-control", placeholder: "How did you hear about us?", autofocus:true %>
+        </div>
+      </div>
+        <div class="form-group row">
+        <div class="col-sm-2 col-form-label">
+          <%= f.label :code %>
+        </div>
+        <div class="col-sm-10">
+          <%= f.text_field :code, class: "form-control", placeholder: "Do you have a recommendation code?", autofocus:true %>
+        </div>
+      </div>
+      
+      
+      
+    <% end %>
+    
+    <div class="col-xs-4 col-xs-offset-4 center">
+       [ <%= link_to "Cancel request and return to articles listing", articles_path %> ]
+    </div>
+  </div>
+</div>

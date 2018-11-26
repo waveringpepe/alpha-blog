@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181105233807) do
+ActiveRecord::Schema.define(version: 20181126203240) do
 
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id"
@@ -32,6 +32,22 @@ ActiveRecord::Schema.define(version: 20181105233807) do
     t.datetime "updated_at"
   end
 
+  create_table "profiles", force: :cascade do |t|
+    t.string "firstname"
+    t.string "lastname"
+    t.string "whatsapp"
+    t.string "skype"
+    t.string "language"
+    t.string "purpose"
+    t.string "age"
+    t.string "username"
+    t.string "level"
+    t.string "begin"
+    t.string "schedule"
+    t.string "recommendation"
+    t.string "code"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "email"
@@ -39,6 +55,10 @@ ActiveRecord::Schema.define(version: 20181105233807) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.boolean  "admin",           default: false
+    t.string   "skype"
+    t.string   "whatsapp"
+    t.string   "lastname"
+    t.string   "firstname"
   end
 
 end

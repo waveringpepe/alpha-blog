@@ -9,7 +9,7 @@
   get 'about', to: 'pages#about'
 
   resources :articles
-  
+  resources :profiles
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
   
